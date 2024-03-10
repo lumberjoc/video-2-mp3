@@ -1,3 +1,5 @@
+# https://medium.com/@seifeddinerajhi/securely-managing-kubernetes-passwords-with-sealed-secrets-2fb331aa83d8#:~:text=Sealed%20Secrets%20are%20the%20resource,and%20upload%20to%20git%20repositories.
+
 ---
 apiVersion: v1
 kind: ServiceAccount
