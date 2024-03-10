@@ -40,10 +40,10 @@ def login():
         email = user_row[0]
         password = user_row[1]
 
-        if auth.username != email or auth.password != password
+        if auth.username != email or auth.password != password:
             return "invalid creds", 401
         else:
-            return createJWT(auth.username, os.environ.get(JWT_SECRET), True)
+            return createJWT(auth.username, os.environ.get("JWT_SECRET"), True)
     
     else: # User is not present in database
         return "invalid creds", 401
@@ -54,9 +54,10 @@ def createJWT(username, secret, authz):
             "username": username,
             "exp": datetime.datetime.now(tz=datetime.timezone.utc)
             + datetime.timedelta(days=1),
-            "iat": datetime.datetime.utcnow(),
+            "iat": datetime.datetime.utcnow(), 
             "admin": authz,
         },
         secret,
         algorithm="HS256",
     )
+
