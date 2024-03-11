@@ -26,5 +26,7 @@ channel = connection.channel()
 def login():
     token, err = access.login(request) # request comes from flask
 
-
-    
+    if not err:
+        return token
+    else: 
+        return err
