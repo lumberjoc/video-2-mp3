@@ -1,0 +1,14 @@
+argcomplete @ file:///private/tmp/python-argcomplete-20240124-5139-lhpjbk/argcomplete-3.2.2
+certifi @ file:///private/tmp/python-certifi-20240202-5063-q0mlj8/certifi-2024.2.2
+cffi @ file:///private/tmp/cffi-20231015-5890-1t5aans/cffi-1.16.0
+cryptography @ file:///private/tmp/python-cryptography-20240126-6080-kuay8l/cryptography-42.0.1
+Jinja2 @ file:///private/tmp/python-jinja-20240111-4980-wxbfhp/Jinja2-3.1.3
+lxml @ file:///private/tmp/python-lxml-20240108-4998-fb5amm/lxml-5.1.0
+MarkupSafe @ file:///private/tmp/python-markupsafe-20240204-5096-dgsy34/MarkupSafe-2.1.5
+packaging @ file:///private/tmp/python-packaging-20231211-11583-vmtfsi/packaging-23.2
+pycparser @ file:///private/tmp/pycparser-20231013-5647-12y5m5s/pycparser-2.21
+pyparsing @ file:///private/tmp/python-pyparsing-20231212-64945-nd3w2a/pyparsing-3.1.1
+python-dateutil @ file:///private/tmp/python-dateutil-20231119-5331-hv8omd/python-dateutil-2.8.2
+pytz @ file:///private/tmp/python-pytz-20240202-4930-br8jbt/pytz-2024.1
+PyYAML @ file:///private/tmp/pyyaml-20231019-6134-1qsnlp0/PyYAML-6.0.1
+six==1.16.0
