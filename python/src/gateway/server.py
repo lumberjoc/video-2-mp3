@@ -17,5 +17,12 @@ mongo = PyMongo(server)
 fs = gridfs.GridFS(mongo.db)
 
 
-# Configure RabbitMQ connection
+# Configure RabbitMQ connection - make synchronous 
 connection = pika.BlockingConnection(pika.ConnectionParameters("rabbitmq"))
+channel = connection.channel()
+
+# Commuincates with auth-service to login and assign token to user
+@server.route("/login", methods=["POST"])
+def login():
+    token, err = access.login(request) # request comes from flask
+    
