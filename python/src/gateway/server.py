@@ -34,3 +34,24 @@ def login():
 @server.route("/upload", methods=["POST"])
 def upload():
     access, err = validate.token(request)
+    
+    # Deserializes an instance containing json doc to python object.
+    # Essentially converts json string to pytohn object 
+    # Contains all the claims from createJWT
+    access = json.loads(access)
+
+    if access["admin"]:
+        if len(request.files) > 1 or len(request.files) < 1:
+            return "exactly one file required", 400
+        
+        # Iterate through key/values in request.files dictionary
+        for _, f in request.files.items():
+            err = util.upload(f, fs, channel, access)
+
+            if err:
+                return err
+            
+        return "success, baby!", 200
+
+    else: 
+        return "not authorized", 401
